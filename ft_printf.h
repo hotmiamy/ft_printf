@@ -6,7 +6,7 @@
 /*   By: llopes-n <llopes-n@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 14:28:27 by llopes-n          #+#    #+#             */
-/*   Updated: 2021/11/14 15:43:29 by llopes-n         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:57:46 by llopes-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 
 # define HEX "0123456789abcdef"
 # define UPPER_HEX "0123456789ABCDEF"
+
+# if __APPLE__
+#  define IS_MACOS 1
+# else
+#  define IS_MACOS 0
+# endif
 
 int		ft_printf(const char *format, ...);
 int		ft_type_c(int chr);
