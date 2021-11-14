@@ -1,0 +1,5 @@
+/printfTester
+*.o
+a.out
+main.c
+*.a
