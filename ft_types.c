@@ -6,7 +6,7 @@
 /*   By: llopes-n <llopes-n@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 00:41:55 by llopes-n          #+#    #+#             */
-/*   Updated: 2021/11/14 17:08:33 by llopes-n         ###   ########.fr       */
+/*   Updated: 2021/11/14 22:44:56 by llopes-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ int	ft_type_p(unsigned long ptr)
 	char	*str;
 	char	*temp;
 
-	if (ptr == 0)
+	if (ptr == 0 && IS_MACOS == 0)
 		return (write(1, "(nil)", 5));
+	else if (ptr == 0 && IS_MACOS == 1)
+		return (write(1, "0x0", 3));
 	str = ft_base_converter(ptr, "0123456789abcdef");
 	temp = str;
 	str = ft_strjoin("0x", temp);
