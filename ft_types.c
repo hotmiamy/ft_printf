@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_types.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llopes-n <llopes-n@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 00:41:55 by llopes-n          #+#    #+#             */
-/*   Updated: 2021/11/14 17:08:33 by llopes-n         ###   ########.fr       */
+/*   Updated: 2021/11/16 23:42:22 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_type_p(unsigned long ptr)
 	char	*str;
 	char	*temp;
 
-	if (ptr == 0)
+	if (ptr == 0 && IS_MACOS == 0)
 		return (write(1, "(nil)", 5));
 	str = ft_base_converter(ptr, "0123456789abcdef");
 	temp = str;
