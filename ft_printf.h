@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 14:28:27 by llopes-n          #+#    #+#             */
-/*   Updated: 2021/11/16 23:40:45 by coder            ###   ########.fr       */
+/*   Updated: 2021/11/18 19:16:04 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ int		ft_printf(const char *format, ...);
 int		ft_type_c(int chr);
 int		ft_type_s(char *str);
 int		ft_type_p(unsigned long ptr);
-int		ft_type_diu(int nbr, char flag, char type);
-int		ft_type_x(unsigned int nbr, char flag, char type);
-char	*flags(char *str, char flag, char type);
+int		ft_type_diu(int nbr, char type);
+int		ft_type_x(unsigned int nbr, char type);
 
 #endif

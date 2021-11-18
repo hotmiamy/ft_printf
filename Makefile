@@ -1,4 +1,4 @@
-SRCFILES = ft_printf.c ft_types.c ft_flags.c
+SRCFILES = ft_printf.c ft_types.c
 
 OBJFILES = $(SRCFILES:.c=.o)
 
@@ -14,13 +14,14 @@ ARFLAGS = rsc
 
 RM = rm -f
 
-.c.o:
+.c.o: 
 	$(CC) $(CFLAGS) -c $^
 
 $(NAME): $(OBJFILES)
 	make -C libft/
 	cp $(LIBPATH)/libft.a $(NAME)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJFILES)
+
 
 all: $(NAME)
 
@@ -32,6 +33,7 @@ re: fclean all
 
 clean:
 	$(RM) $(OBJFILES)
+	$(RM) $(OBJFILES_BONUS)
 
 fclean: clean
 	$(RM) $(NAME)

@@ -5,12 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 00:41:55 by llopes-n          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/11/16 23:42:22 by coder            ###   ########.fr       */
-=======
-/*   Updated: 2021/11/14 22:44:56 by llopes-n         ###   ########.fr       */
->>>>>>> e4f2ae08a0c168d817fe4bfe1ed028451bd99e62
+/*   Created: 2021/11/18 18:14:07 by coder             #+#    #+#             */
+/*   Updated: 2021/11/18 19:15:13 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +44,7 @@ int	ft_type_p(unsigned long ptr)
 	return (write_len);
 }
 
-int	ft_type_diu(int nbr, char flag, char type)
+int	ft_type_diu(int nbr, char type)
 {
 	char	*str;
 	int		write_len;
@@ -59,14 +55,12 @@ int	ft_type_diu(int nbr, char flag, char type)
 		str = ft_itoa(nbr);
 	else
 		str = ft_uitoa(nbr);
-	if (nbr > 0 && ft_strchr(" +", flag) && flag != '\0' && type != 'u')
-		str = flags(str, flag, type);
 	write_len = write(1, str, ft_strlen(str) * sizeof(char));
 	free(str);
 	return (write_len);
 }
 
-int	ft_type_x(unsigned int nbr, char flag, char type)
+int	ft_type_x(unsigned int nbr, char type)
 {
 	char	*str;
 	int		len_write;
@@ -77,8 +71,6 @@ int	ft_type_x(unsigned int nbr, char flag, char type)
 		str = ft_base_converter(nbr, HEX);
 	else
 		str = ft_base_converter(nbr, UPPER_HEX);
-	if (ft_strchr("#", flag) && ft_strchr("xX", type) && flag != '\0')
-		str = flags(str, flag, type);
 	len_write = write(1, str, ft_strlen(str) * sizeof(char));
 	free(str);
 	return (len_write);
