@@ -4,5 +4,3 @@ a.out
 main.c
 *.a
 /ft_printf_tester
-*bonus.c
-*bonus.h
