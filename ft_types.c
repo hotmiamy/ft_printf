@@ -6,7 +6,11 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 00:41:55 by llopes-n          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/11/16 23:42:22 by coder            ###   ########.fr       */
+=======
+/*   Updated: 2021/11/14 22:44:56 by llopes-n         ###   ########.fr       */
+>>>>>>> e4f2ae08a0c168d817fe4bfe1ed028451bd99e62
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +37,8 @@ int	ft_type_p(unsigned long ptr)
 
 	if (ptr == 0 && IS_MACOS == 0)
 		return (write(1, "(nil)", 5));
+	else if (ptr == 0 && IS_MACOS == 1)
+		return (write(1, "0x0", 3));
 	str = ft_base_converter(ptr, "0123456789abcdef");
 	temp = str;
 	str = ft_strjoin("0x", temp);
